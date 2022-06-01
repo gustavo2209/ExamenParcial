@@ -126,26 +126,26 @@ namespace ExamenParcial
             // nuevaPreguntaToolStripMenuItem
             // 
             this.nuevaPreguntaToolStripMenuItem.Name = "nuevaPreguntaToolStripMenuItem";
-            this.nuevaPreguntaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.nuevaPreguntaToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
             this.nuevaPreguntaToolStripMenuItem.Text = "Consulta";
             this.nuevaPreguntaToolStripMenuItem.Click += new System.EventHandler(this.nuevaPreguntaToolStripMenuItem_Click);
             // 
             // eliminarToolStripMenuItem
             // 
             this.eliminarToolStripMenuItem.Name = "eliminarToolStripMenuItem";
-            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(177, 6);
+            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(118, 6);
             // 
             // nuevasPreguntasToolStripMenuItem
             // 
             this.nuevasPreguntasToolStripMenuItem.Name = "nuevasPreguntasToolStripMenuItem";
-            this.nuevasPreguntasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.nuevasPreguntasToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
             this.nuevasPreguntasToolStripMenuItem.Text = "Nueva";
             this.nuevasPreguntasToolStripMenuItem.Click += new System.EventHandler(this.nuevasPreguntasToolStripMenuItem_Click);
             // 
             // eliminarToolStripMenuItem1
             // 
             this.eliminarToolStripMenuItem1.Name = "eliminarToolStripMenuItem1";
-            this.eliminarToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.eliminarToolStripMenuItem1.Size = new System.Drawing.Size(121, 22);
             this.eliminarToolStripMenuItem1.Text = "Eliminar";
             this.eliminarToolStripMenuItem1.Click += new System.EventHandler(this.eliminarToolStripMenuItem1_Click);
             // 
@@ -177,12 +177,14 @@ namespace ExamenParcial
             this.nuevaToolStripMenuItem.Name = "nuevaToolStripMenuItem";
             this.nuevaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.nuevaToolStripMenuItem.Text = "Nueva";
+            this.nuevaToolStripMenuItem.Click += new System.EventHandler(this.nuevaToolStripMenuItem_Click);
             // 
             // eliminarToolStripMenuItem2
             // 
             this.eliminarToolStripMenuItem2.Name = "eliminarToolStripMenuItem2";
             this.eliminarToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
             this.eliminarToolStripMenuItem2.Text = "Eliminar";
+            this.eliminarToolStripMenuItem2.Click += new System.EventHandler(this.eliminarToolStripMenuItem2_Click);
             // 
             // calificadoToolStripMenuItem
             // 

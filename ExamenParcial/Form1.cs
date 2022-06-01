@@ -17,6 +17,7 @@ namespace ExamenParcial
         private PreguntaQry preguntaQry;
         private PreguntaIns preguntaIns;
         private RespuestaQry respuestaQry;
+        private RespuestaIns respuestaIns;
 
         public Form1()
         {
@@ -165,6 +166,50 @@ namespace ExamenParcial
             respuestaQry.MdiParent = this;
             respuestaQry.Show();
             respuestaQry.BringToFront();
+        }
+
+        private void nuevaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form.GetType() == typeof(RespuestaIns))
+                {
+                    form.Activate();
+                    return;
+                }
+            }
+
+            respuestaIns = new RespuestaIns(this);
+            respuestaIns.MdiParent = this;
+            respuestaIns.Show();
+            respuestaIns.BringToFront();
+        }
+
+        private void eliminarToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            bool msg = false;
+
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form.GetType() == typeof(RespuestaQry))
+                {
+                    respuestaQry = (RespuestaQry)form;
+                    respuestaQry.Activate();
+                    respuestaQry.RetirarFila();
+
+                    msg = false;
+                    break;
+                }
+                else
+                {
+                    msg = true;
+                }
+            }
+
+            if (msg)
+            {
+                MessageBox.Show("Para retirar active el formulario de CONSULTA DE RESPUESTAS");
+            }
         }
     }
 }

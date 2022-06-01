@@ -128,5 +128,33 @@ namespace ExamenParcial
         {
             Consultar();
         }
+
+        public void RetirarFila()
+        {
+            DataGridViewSelectedRowCollection selectedRowCollection = dgvResultado.SelectedRows;
+
+            if (selectedRowCollection.Count > 0)
+            {
+                var confirmResult = MessageBox.Show("¿Está seguro de retirar esta respuesta?", "Confirmar Retiro", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (confirmResult == DialogResult.Yes)
+                {
+                    int idrespuesta = Convert.ToInt32(dgvResultado.SelectedRows[0].Cells[0].Value.ToString());
+
+                    using (var db = new ModelExamen())
+                    {
+                        var respuesta = db.respuestas.Find(idrespuesta);
+                        db.respuestas.Remove(respuesta);
+                        db.SaveChanges();
+
+                        MessageBox.Show("Respuesta eliminada correctamente");
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Seleccione fila a retirar");
+            }
+        }
     }
 }

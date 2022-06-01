@@ -99,7 +99,7 @@ namespace ExamenParcial
 
             if (selectedRowCollection.Count > 0)
             {
-                var confirmResult = MessageBox.Show("¿Está seguro de retirar este examen?", "Confirmar Retiro", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                var confirmResult = MessageBox.Show("¿Está seguro de retirar esta pregunta?", "Confirmar Retiro", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                 if (confirmResult == DialogResult.Yes)
                 {
