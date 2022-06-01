@@ -78,9 +78,27 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="ModelExamen.cs" />
+    <Compile Include="PreguntaIns.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PreguntaIns.Designer.cs">
+      <DependentUpon>PreguntaIns.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PreguntaQry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PreguntaQry.Designer.cs">
+      <DependentUpon>PreguntaQry.cs</DependentUpon>
+    </Compile>
     <Compile Include="preguntas.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RespuestaQry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RespuestaQry.Designer.cs">
+      <DependentUpon>RespuestaQry.cs</DependentUpon>
+    </Compile>
     <Compile Include="respuestas.cs" />
     <EmbeddedResource Include="ExamenIns.resx">
       <DependentUpon>ExamenIns.cs</DependentUpon>
@@ -90,6 +108,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PreguntaIns.resx">
+      <DependentUpon>PreguntaIns.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PreguntaQry.resx">
+      <DependentUpon>PreguntaQry.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -101,6 +125,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="RespuestaQry.resx">
+      <DependentUpon>RespuestaQry.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

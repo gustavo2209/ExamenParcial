@@ -28,7 +28,7 @@ namespace ExamenParcial
             Consulta();
         }
 
-        private void Consulta()
+        public void Consulta()
         {
             using (var db = new ModelExamen())
             {
@@ -73,6 +73,36 @@ namespace ExamenParcial
                 tabla.Columns.Add(t, System.Type.GetType("System.String"));
             }
             return tabla;
+        }
+
+        public void RetirarFila()
+        {
+            DataGridViewSelectedRowCollection selectedRowCollection = dgvExamen.SelectedRows;
+
+            if (selectedRowCollection.Count > 0)
+            {
+                var confirmResult = MessageBox.Show("¿Está seguro de retirar este examen?", "Confirmar Retiro", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (confirmResult == DialogResult.Yes)
+                {
+                    int idexamen = Convert.ToInt32(dgvExamen.SelectedRows[0].Cells[0].Value.ToString());
+
+                    using (var db = new ModelExamen())
+                    {
+                        var examen = db.examenes.Find(idexamen);
+                        db.examenes.Remove(examen);
+                        db.SaveChanges();
+
+                        MessageBox.Show("Examen eliminado correctamente");
+
+                        Consulta();
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Seleccione fila a retirar");
+            }
         }
     }
 }
