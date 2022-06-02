@@ -18,6 +18,7 @@ namespace ExamenParcial
         private PreguntaIns preguntaIns;
         private RespuestaQry respuestaQry;
         private RespuestaIns respuestaIns;
+        private TomaExamen tomaExamen;
 
         public Form1()
         {
@@ -210,6 +211,23 @@ namespace ExamenParcial
             {
                 MessageBox.Show("Para retirar active el formulario de CONSULTA DE RESPUESTAS");
             }
+        }
+
+        private void tomaDeExamenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form.GetType() == typeof(TomaExamen))
+                {
+                    form.Activate();
+                    return;
+                }
+            }
+
+            tomaExamen = new TomaExamen(this);
+            tomaExamen.MdiParent = this;
+            tomaExamen.Show();
+            tomaExamen.BringToFront();
         }
     }
 }
